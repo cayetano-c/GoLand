@@ -20,5 +20,19 @@ func main() {
 
 	for key, value := range visitas {
 		fmt.Println(key, ":", value)
+
 	}
+	visitas["Galeria"] = 20
+	fmt.Println("Las noticias de visitas de Galeria son:", visitas["Galeria"])
+	visitas["Inicio"] = 200
+	fmt.Println("Las noticias de visitas de Inicio son:", visitas["Inicio"])
+	fmt.Println("La suma de todas las visitas es:", Suma(visitas))
+
+}
+func Suma(visitas map[string]int) int {
+	sum := 0
+	for _, value := range visitas {
+		sum += value
+	}
+	return sum
 }
